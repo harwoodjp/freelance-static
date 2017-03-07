@@ -1,6 +1,6 @@
 $background: #ebf2f0;
-$service: #f6ffff;
-$service-hover: #FFFFFF;
+$service: #FFFFFF;
+$service-hover: #f6ffff;
 $body-black: #212221;
 body {
 	background-color:$background;
@@ -80,7 +80,6 @@ body {
 		padding:1rem;
 		flex-basis:15em;
 		&:hover {
-			background-color:$service-hover;			
 			border:2px dashed black;
 			color:black;
 		}
