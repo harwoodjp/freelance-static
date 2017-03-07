@@ -1,0 +1,90 @@
+$background: #ebf2f0;
+$service: #f6ffff;
+$service-hover: #FFFFFF;
+$body-black: #212221;
+body {
+	background-color:$background;
+	color:$body-black;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+.container-margins {
+	margin:0 auto;
+	max-width:60em;
+}
+.flex-column {
+	display:flex;
+	flex-direction:column;
+	flex-wrap:wrap;
+	&-center {
+		@extend .flex-column;
+		align-items: center;
+		&-center {
+		@extend .flex-column-center;			
+			justify-content:center;
+		}
+
+	}
+}
+.flex-row {
+	display:flex;
+	flex-direction:row;
+	flex-wrap:wrap;
+	&-center {
+		@extend .flex-row;
+		justify-content: center;
+		&-center {
+			@extend .flex-column-center;			
+			align-items:center;
+		}
+	}
+	&-reverse {
+		@extend .flex-row;
+		flex-direction:row-reverse;
+	}
+}
+.header {
+	margin-top:2em;
+	width:100%;
+	&__items {
+		justify-content: flex-start;
+		align-items:center;
+		&__item {
+			margin:1em;
+			&--active {
+				@extend .header__items__item;
+				border-bottom:1px solid $body-black;
+			}
+		}
+	}
+	&__logo {
+		align-items:center;
+		&__main {
+			text-decoration: underline;
+		}
+		&__support {
+
+		}
+	}
+}
+
+.services {
+	margin-top:2em;
+	i {
+		font-size:8em;
+		margin-bottom:.1em;		
+	}
+	&__service {
+		background-color:$service;
+		border:2px dashed $body-black;
+		margin:1rem;
+		padding:1rem;
+		flex-basis:15em;
+		&:hover {
+			background-color:$service-hover;			
+			border:2px dashed black;
+			color:black;
+		}
+	}
+}
+
+
