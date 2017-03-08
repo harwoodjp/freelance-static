@@ -19,6 +19,7 @@ body {
 .container-margins {
 	margin:0 auto;
 	max-width:60em;
+	position:relative;
 }
 .flex-column {
 	display:flex;
@@ -73,6 +74,50 @@ body {
 		}
 		&__support {
 
+		}
+	}
+}
+
+.message-form {	
+	bottom:0;	
+	display:block;
+	overflow:hidden;
+	position:fixed;
+	top:0;
+	transition:.5s;	
+	width:0px;
+	background:$service;
+	&--active {
+		transition:.5s;
+		width:30em;
+		display:block;
+	}
+	&__exit {
+		cursor:pointer;
+		i {
+			font-size:3em;
+		}
+		justify-content: flex-end;
+	}
+	&__form {
+		margin-top:20%;
+		form {
+			background-color:$background;
+			padding:1em;
+		}
+		&__item {
+			align-items:center;
+			i {
+				position:relative;
+				top:.2em;
+			}
+		}
+		input,textarea {
+			padding:.5em;
+			border:2px dashed $body-black;
+		}
+		textarea {
+			width:25em;
 		}
 	}
 }
