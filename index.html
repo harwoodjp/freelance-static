@@ -64,15 +64,18 @@
 		</div>
 		
 		<div class="message-form__form flex-column-center">
-			<form>
+			<form action="https://formspree.io/harwoodjp@g.cofc.edu" method="POST">
 				<p class="message-form__form__item">	
-					<input placeholder="Justin"> 
+					<input type="text" name="name" placeholder="Name" required> 
 				</p>
 				<p class="message-form__form__item">	
-					<input placeholder="harwoodjp@g.cofc.edu"> 
+					<input type="email" name="_replyto" placeholder="Email" required> 
 				</p>
 				<p>
-					<textarea name="" id="" cols="30" rows="10" placeholder="Hi, I'm interested in chatting about a potential project."></textarea>
+					<textarea required name="message" id="" cols="30" rows="10" placeholder="Hi, I'm interested in chatting about a potential project."></textarea>
+				</p>
+				<p class="message-form__form__item--submit">
+					<input type="submit" value="Send!">
 				</p>
 			</form>
 		</div>
